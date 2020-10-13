@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title> Joe's Hotdogs </title>
+  </head>
+  <body>
+    <h1> Welcome to Joe's Hotdogs! </h1>
+    <br>
+    <h2> Your Order </h2>
+    <script language = "Javascript">
+      var x, y, z, sum, sumT;
+
+      x = prompt("How many Hotdogs?", "3");
+      y = prompt("How many French Fries?", "3");
+      z = prompt("How many Drinks?", "3");
+      document.write(x + " Hot Dogs, $" + (x * 3.25)
+                      + "<br/>" + y + " French fries, $" + (y * 2)
+                      + "<br/>" + z + " Drinks, $" + (z * 1.5) + "<br/>");
+
+      document.write("Subtotal (before tax): " + ((x * 3.25)+
+                    (y * 2)+ (z * 1.5)) + "<br/>" + "<br/>");
+      sum = (x * 3.25) + (y * 2) + (z * 1.5);
+      if (sum > 20) {
+        document.write("Congratulations, you get Joe's Discount because your order is over $20" + "<br/>");
+        sum = sum * .9;
+      }
+      sumT = sum * 1.0625;
+      var t = sumT - sum;
+      document.write("Taxes = " + t + "<br/>" + "<br/>");
+      document.write("Subtotal (after tax): " + sumT + "<br/>");
+
+
+    </script>
+
+  </body>
+</html>
